@@ -1,0 +1,21 @@
+.headerNav {
+  border-radius: 13px;
+  background-color: $lighterGray;
+  @include max-width-container(40px);
+  @include margin__left-right(35px);
+
+  .navContainer {
+    padding: 20px 50px;
+    position: relative;
+  }
+
+  .logoTitle {
+    &::before {
+      content: url('../images/digitalinnerprize-symbol.png');
+    }
+
+    .titleLink {
+      font-size: 17px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.businessService {
+  margin-top: -127px;
+  z-index: 1;
+  height: 100%;
+  height: calc(973px + 127px);
+  background-color: $lighterGray;
+
+  .businessServiceContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-align: right;
+    @include max-width-container();
+    
+    .textContainer {
+      margin-left: -160px;
+      margin-bottom: 290px;
+
+      .businessTitle {
+        @include font-sizer(36px);
+      }
+
+      p {
+        width: 85%;
+        float: right;
+      }
+    }
+  }
+}

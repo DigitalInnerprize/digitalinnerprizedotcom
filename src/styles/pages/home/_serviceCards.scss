@@ -1,0 +1,77 @@
+.serviceCardContainer {
+
+  .serviceCards {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 5vw);
+    grid-gap: 1rem;
+
+    .serviceCard {
+      border-radius: 13px;
+      cursor: pointer;
+
+      &.serviceCard-1,
+      &.serviceCard-2,
+      &.serviceCard-3 {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &.serviceCard-1 {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        background-image: url('../images/makena-logo.png');
+      }
+
+      &.serviceCard-2 {
+        grid-column-start: 6;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 6;
+        background-image: url('../images/winston-logo.png');
+      }
+
+      &.serviceCard-3 {
+        grid-column-start: 2;
+        grid-column-end: 10;
+        grid-row-start: 6;
+        grid-row-end: 10;
+        background-image: url('../images/ubisoft-logo.png');
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+        border-radius: inherit;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  transition: .9s ease;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @each $currentColor in $servicesCardColorArray {
+    $i: index($servicesCardColorArray, $currentColor);
+    &.overlay-#{$i} { 
+      background-color: $currentColor;
+    }
+  }
+
+  .cardTitle {
+    margin: auto;
+  }
+}

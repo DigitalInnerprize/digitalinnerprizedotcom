@@ -1,0 +1,33 @@
+.contactContainer {
+  height: 900px;
+  position: relative;
+  display: flex;
+  background-image: url('../images/undraw_click_here_2li1_recolor.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: $lighterGray;
+
+  #contactText {
+    top: 32%;
+    right: 95px;
+    position: absolute;
+    width: 400px;
+    text-align: center;
+
+    p {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contactTitle {
+      @include font-sizer(36px);
+    }
+  }
+
+  .contactBtn {
+    color: white;
+    font-size: 34px;
+    font-weight: 600;
+    @include button($lightBlue, 0, 0);
+  }
+}

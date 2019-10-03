@@ -1,0 +1,24 @@
+.services {
+  padding: 0 49.5px;
+  width: 100%;
+  height: 254px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #707070;
+  border-radius: 13px;
+  background-color: white;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  @include font-sizer(30px);
+  @include max-width-container();
+
+  @each $currentColor in $servicesColorArray {
+    $i: index($servicesColorArray, $currentColor);
+    .service-#{$i} { 
+        color: $currentColor;
+    }
+  }
+}

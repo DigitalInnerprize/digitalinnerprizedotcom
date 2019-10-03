@@ -1,0 +1,28 @@
+#bannerContainer {
+  padding: 50px;
+  height: calc(100vh - 133px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  @include max-width-container();
+
+  .bannerContent {
+    max-width: 40%;
+    
+    .bannerTitle {
+      @include font-sizer(43px);
+    }
+
+    .bannerDescription {
+      margin: 30px 0 60px;
+    }
+
+    .bannerBtn {
+      color: white;
+      font-size: 34px;
+      font-weight: 600;
+      @include button($orange, 0, 0);
+    }
+  }
+}
