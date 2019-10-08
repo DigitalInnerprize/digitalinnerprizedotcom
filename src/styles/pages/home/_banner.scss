@@ -27,9 +27,11 @@
   }
 
   @include breakpoint-max($screen-sm) {
+    margin: 70px 0;
+    padding: 0 2.5%;
     display: block;
     position: relative;
-    height: 100vh;
+    height: 780px;
 
     .bannerContent {
       z-index: 1;
@@ -44,7 +46,7 @@
     }
 
     .bannerImage {
-      top: 7%;
+      top: 4%;
       right: 0;
       position: absolute;
       z-index: 0;

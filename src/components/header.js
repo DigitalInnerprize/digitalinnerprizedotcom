@@ -28,6 +28,7 @@ function Header({ siteTitle }) {
   return (
     <header className='headerNav'>
       <div className='navContainer'>
+        <div className="container">
         <h5 className='logoTitle'>
           <Link
             to="/"
@@ -37,6 +38,7 @@ function Header({ siteTitle }) {
           </Link>
         </h5>
         <MenuButton open={menuOpen} onClick={() => setMenuOpen(!menuOpen)} color='#090C08'/>
+      </div>
       </div>
       <Menu open={menuOpen}>
         {menuItems}

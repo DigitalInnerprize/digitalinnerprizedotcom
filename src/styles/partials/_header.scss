@@ -1,18 +1,25 @@
 .headerNav {
   border-radius: 13px;
-  @include max-width-container();
+  width: 100vw;
 
   .navContainer {
     padding: 20px 50px;
+    margin: 0 auto;
     right: 0;
     top: 0;
     left: 0;
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: $lighterGray;
     z-index: 15;
+
+    .container {
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+    }
   }
 
   .logoTitle {

@@ -75,6 +75,10 @@ export function Menu(props) {
     },
     menuList: {
       paddingTop: '6rem',
+      maxWidth: '1300px',
+      width: '100%',
+      margin: '0 auto',
+      height: '100%',
     }
   }
   return(
