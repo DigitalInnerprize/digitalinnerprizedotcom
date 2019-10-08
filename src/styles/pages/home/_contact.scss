@@ -1,22 +1,23 @@
 .contactContainer {
-  height: 900px;
+  height: 830px;
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('../images/undraw_click_here_2li1_recolor.png');
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: $lighterGray;
 
   #contactText {
-    top: 32%;
-    right: 95px;
-    position: absolute;
-    width: 400px;
+    padding: 20px;
+    width: 460px;
     text-align: center;
+    background-color: rgba($lighterGray, 0.8);
+    border-radius: 13px;
 
     p {
-      margin-top: 15px;
-      margin-bottom: 20px;
+      @include margin__top-bottom($spacing--md, $spacing--lg);
     }
 
     .contactTitle {
@@ -29,5 +30,11 @@
     font-size: 34px;
     font-weight: 600;
     @include button($lightBlue, 0, 0);
+  }
+
+  @include breakpoint-max($screen-sm) {
+    padding: 110px 0;
+    background-image: none;
+    height: 100%;
   }
 }

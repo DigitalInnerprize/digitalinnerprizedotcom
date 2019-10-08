@@ -1,6 +1,6 @@
 #bannerContainer {
-  padding: 50px;
-  height: calc(100vh - 133px);
+  padding: 0 50px;
+  height: calc(100vh - 280px);
   position: relative;
   display: flex;
   align-items: center;
@@ -23,6 +23,31 @@
       font-size: 34px;
       font-weight: 600;
       @include button($orange, 0, 0);
+    }
+  }
+
+  @include breakpoint-max($screen-sm) {
+    display: block;
+    position: relative;
+    height: 100vh;
+
+    .bannerContent {
+      z-index: 1;
+      position: relative;
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .bannerImage {
+      top: 7%;
+      right: 0;
+      position: absolute;
+      z-index: 0;
     }
   }
 }

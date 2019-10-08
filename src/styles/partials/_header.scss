@@ -1,12 +1,18 @@
 .headerNav {
   border-radius: 13px;
-  background-color: $lighterGray;
-  @include max-width-container(40px);
-  @include margin__left-right(35px);
+  @include max-width-container();
 
   .navContainer {
     padding: 20px 50px;
-    position: relative;
+    right: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $lighterGray;
+    z-index: 15;
   }
 
   .logoTitle {
@@ -16,6 +22,14 @@
 
     .titleLink {
       font-size: 17px;
+    }
+  }
+
+  @include breakpoint-max($screen-sm) {
+    @include max-width-container();
+
+    .navContainer {
+      padding: 20px 10px;
     }
   }
 }

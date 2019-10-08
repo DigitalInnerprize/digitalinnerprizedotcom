@@ -18,7 +18,17 @@
   @each $currentColor in $servicesColorArray {
     $i: index($servicesColorArray, $currentColor);
     .service-#{$i} { 
-        color: $currentColor;
+      color: $currentColor;
+
+      &:nth-of-type(2) {
+        @include margin__left-right($spacing--lg);
+      }
     }
+  }
+
+  @include breakpoint-max($screen-xs5) {
+    padding: 0 10px;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }

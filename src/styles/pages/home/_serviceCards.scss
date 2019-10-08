@@ -1,10 +1,42 @@
+@mixin backgroundImages {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .serviceCardContainer {
+  margin-bottom: 10vh;
 
   .serviceCards {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-rows: repeat(10, 5vw);
     grid-gap: 1rem;
+    grid-template-areas: 
+      ". . . ."
+      ". text text ."
+      ". left right ."
+      ". left right ."
+      ". left right ."
+      ". left right ."
+      ". wide wide ."
+      ". wide wide ."
+      ". wide wide ."
+      ". wide wide .";
+
+    .serviceCardText {
+      grid-area: text;
+
+      .serviceCardTextTitle {
+        margin-top: auto;
+        text-align: center;
+
+        .serviceCardsLink {
+          color: $hotPink;
+          @include font-sizer(24px);;
+          font-weight: 600;
+        }
+      }
+    }
 
     .serviceCard {
       border-radius: 13px;
@@ -19,27 +51,21 @@
       }
 
       &.serviceCard-1 {
-        grid-column-start: 2;
-        grid-column-end: 6;
-        grid-row-start: 2;
-        grid-row-end: 6;
+        grid-area: left;
         background-image: url('../images/makena-logo.png');
+        @include backgroundImages();
       }
 
       &.serviceCard-2 {
-        grid-column-start: 6;
-        grid-column-end: 10;
-        grid-row-start: 2;
-        grid-row-end: 6;
+        grid-area: right;
         background-image: url('../images/winston-logo.png');
+        @include backgroundImages();
       }
 
       &.serviceCard-3 {
-        grid-column-start: 2;
-        grid-column-end: 10;
-        grid-row-start: 6;
-        grid-row-end: 10;
+        grid-area: wide;
         background-image: url('../images/ubisoft-logo.png');
+        @include backgroundImages();
       }
 
       &:hover .overlay {
@@ -48,7 +74,30 @@
         cursor: pointer;
       }
     }
+
+    @include breakpoint-max($screen-sm-max) {
+      grid-template-areas: 
+      ". . . ."
+      ". text text ."
+      ". left left ."
+      ". left left ."
+      ". right right ."
+      ". right right ."
+      ". wide wide ."
+      ". wide wide ."
+      ". . . ."
+      ". . . .";
+
+      .serviceCard:hover .overlay {
+        display: none;
+      }
+    }
   }
+}
+
+.cardTitle {
+  color: white;
+  @include font-sizer(32px);
 }
 
 .overlay {
@@ -63,15 +112,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   @each $currentColor in $servicesCardColorArray {
     $i: index($servicesCardColorArray, $currentColor);
     &.overlay-#{$i} { 
       background-color: $currentColor;
     }
-  }
-
-  .cardTitle {
-    margin: auto;
   }
 }
