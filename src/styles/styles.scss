@@ -58,7 +58,6 @@ p {
 footer {
   display: flex;
   justify-content: center;
-  background-color: $lighterGray;
 
   > * {
     font-size: 15px;
@@ -103,3 +102,4 @@ footer {
 
 @import './partials/header';
 @import './pages/home/main';
+@import './pages/aboutus/main';

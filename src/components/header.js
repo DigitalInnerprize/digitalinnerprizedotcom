@@ -9,7 +9,7 @@ import {
 
 const menu = [
   {title:'Home', url:'/'},
-  {title:'About Us', url:'/about'},
+  {title:'About Us', url:'/aboutus'},
   {title:'Our Work', url:'/ourwork'}
 ];
 
