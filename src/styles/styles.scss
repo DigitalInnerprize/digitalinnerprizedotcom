@@ -33,10 +33,11 @@ a {
 
 p {
   @include paragragh-opacity();
+  line-height: 28px;
 }
 
 .imageContainer {
-  width: 100%;
+  width: 85%;
 
   &.bannerImage {
     margin-left: -40px;

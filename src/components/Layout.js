@@ -28,7 +28,7 @@ const Layout = ({ children, page = '' }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <footer style={{ backgroundColor: page !== 'home' ? 'white' : '#f9f9f9'}}>
-          © {new Date().getFullYear()}, <span>Built by <p>Digital InnerPrize L.L.C</p></span>
+          © {new Date().getFullYear()}, <span>Built by <a href='/'><p>Digital InnerPrize L.L.C</p></a></span>
         </footer>
     </>
   )
