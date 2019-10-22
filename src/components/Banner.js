@@ -26,7 +26,7 @@ const Banner = () => {
           We create content that stands out.
         </h1>
         <p className="bannerDescription">
-        We think smart businesses and entrepreneurs must fully embrace modern ways of reaching their customers to succed in today’s crowded marketplace your customers are online… and you need to meet them there.
+        We think smart businesses and entrepreneurs must fully embrace modern ways of reaching their customers to succeed in today’s crowded marketplace your customers are online… and you need to meet them there.
         </p>
         <button className="bannerBtn" onClick={onClick}>Contact Us</button>
       </div>
