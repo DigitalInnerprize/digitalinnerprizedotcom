@@ -37,10 +37,10 @@ p {
 }
 
 .imageContainer {
-  width: 72%;
-
-  &.bannerImage {
-    margin-left: -40px;
+  width: 100%;
+  
+  @include breakpoint-custom($screen-xs-max) {
+    width: 72%;
   }
 }
 
