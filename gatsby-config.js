@@ -35,13 +35,6 @@ module.exports = {
     ],
   },
   plugins: [
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: "2utrbhgxzaor",
-        accessToken: "CbZ8M2KHsEv457zNMRksiDfy2GROOaum42j0lmTlXhU"
-      }
-    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -65,6 +58,7 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
