@@ -6,7 +6,11 @@
   background-color: $lighterGray;
 
   .contactImage {
-    width: 51%;
+    display: none;
+    @include breakpoint-custom($screen-xs-max) {
+      display: block;
+      width: 45%;
+    }
   }
 
   #contactText {
