@@ -38,7 +38,7 @@
     background-color: rgba($lightBlue, 1);
     position: absolute;
     z-index: -2;
-    bottom: 13%;
+    bottom: 21%;
 
     @include breakpoint-custom($screen-sm-max) {
       left: 16%;

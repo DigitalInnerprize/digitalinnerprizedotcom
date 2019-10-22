@@ -17,12 +17,14 @@ function Header({ siteTitle }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuItems = menu.map(({title, url},index)=>{
     return (
-      <MenuItem 
-        key={index} 
-        delay={`${index * 0.1}s`}
-        onClick={() => setMenuOpen(false)}>
-        <Link to={url}>{title}</Link>
-      </MenuItem>)
+      <Link key={index} to={url}>
+        <MenuItem
+          delay={`${index * 0.1}s`}
+          onClick={() => setMenuOpen(false)}>
+          {title}
+        </MenuItem>
+      </Link>
+    )
   });
 
   return (

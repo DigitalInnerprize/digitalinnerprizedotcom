@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 html {
   font-family: $fontFamily;
   font-size: 17px;
@@ -103,3 +107,4 @@ footer {
 @import './partials/header';
 @import './pages/home/main';
 @import './pages/aboutus/main';
+@import './pages/ourwork/main';
