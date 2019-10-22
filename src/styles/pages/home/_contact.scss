@@ -1,13 +1,13 @@
 .contactContainer {
-  height: 830px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/undraw_click_here_2li1_recolor.png');
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: $lighterGray;
+
+  .contactImage {
+    width: 51%;
+  }
 
   #contactText {
     padding: 20px;
