@@ -54,6 +54,11 @@
         left: 0;
         position: absolute;
         z-index: 0;
+        width: 100%;
+
+        @include breakpoint-custom($screen-xs-max) {
+          width: 60%;
+        }
       }
     }
   }

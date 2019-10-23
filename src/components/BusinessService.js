@@ -18,7 +18,7 @@ const BusinessService = () => {
   return (
     <div className='businessService'>
       <div className="businessServiceContainer paddingContainer">
-      <div className="imageContainer businessImage">
+      <div className="businessImage">
         <Img sizes={businessServiceImage.childImageSharp.sizes} />
       </div>
       <div className="textContainer">

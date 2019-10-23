@@ -36,33 +36,28 @@ p {
   line-height: 28px;
 }
 
-.imageContainer {
-  width: 100%;
-  
-  @include breakpoint-custom($screen-xs-max) {
-    width: 72%;
-  }
-}
-
 .contentContainer {
-  margin: 0 50px;
+  margin: 75px 0;
+  padding: 0 5%;
 
-  @include breakpoint-max($screen-sm) {
-    margin: 0 50px 25px;
+  @include breakpoint-custom($screen-sm-max) {
+    margin: 0 50px;
+    padding: 0;
   }
 }
 
 .paddingContainer {
-  padding: 0 50px;
+  padding: 0;
 
-  @include breakpoint-max($screen-sm) {
-    padding: 0;
+  @include breakpoint-custom($screen-sm-max) {
+    padding: 0 50px;
   }
 }
 
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   > * {
     font-size: 15px;

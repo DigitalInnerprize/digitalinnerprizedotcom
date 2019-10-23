@@ -30,7 +30,7 @@ const Banner = () => {
         </p>
         <button className="bannerBtn" onClick={onClick}>Contact Us</button>
       </div>
-      <div className="imageContainer bannerImage">
+      <div className="bannerImage">
         <Img
           sizes={bannerImage.childImageSharp.sizes}
         />
