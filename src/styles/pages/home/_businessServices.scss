@@ -1,64 +1,66 @@
 .businessService {
-  margin-top: -127px;
+  margin-top: 0;
+  height: 610px;
   z-index: 1;
-  height: 100%;
-  height: calc(973px + 127px);
   background-color: $lighterGray;
 
   .businessServiceContainer {
-    display: flex;
-    align-items: center;
+    display: block;
     height: 100%;
-    text-align: right;
-    @include max-width-container();
+    text-align: center;
+    position: relative;
     
     .textContainer {
-      margin-left: -160px;
-      margin-bottom: 290px;
-      z-index: 3;
+      padding-top: 40px;
+      margin: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
 
       .businessTitle {
         @include font-sizer(36px);
       }
+    }
 
-      p {
-        width: 85%;
-        float: right;
-      }
+    .businessImage {
+      bottom: 3%;
+      left: 0;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
     }
   }
 
-  @include breakpoint-max($screen-sm) {
-    margin-top: 0;
-    height: 570px;
+  @include breakpoint-custom($screen-xs-max) {
+    margin-top: -127px;
+    height: calc(973px + 127px);
 
     .businessServiceContainer {
-      text-align: center;
-      display: block;
-      position: relative;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      @include max-width-container();
 
       .textContainer {
-        padding-top: 40px;
-        margin: 0;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: center;
-        height: 100%;
+        margin-left: -160px;
+        margin-bottom: 290px;
+        z-index: 3;
+        text-align: right;
+        display: block;
+        
+
+        p {
+          width: 85%;
+          float: right;
+        }
       }
 
       .businessImage {
-        bottom: 3%;
-        left: 0;
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-
-        @include breakpoint-custom($screen-xs-max) {
-          width: 60%;
-        }
+        width: 60%;
+        position: initial;
       }
     }
   }

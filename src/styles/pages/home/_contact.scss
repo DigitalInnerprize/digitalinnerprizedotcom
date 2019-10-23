@@ -1,3 +1,7 @@
+.contactPageContainer {
+  background-color: $lighterGray;
+}
+
 .contactContainer {
   padding: 90px 0;
   height: 100%;
@@ -5,14 +9,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $lighterGray;
 
   .contactImage {
     display: none;
-    @include breakpoint-custom($screen-xs-max) {
-      display: block;
-      width: 45%;
-    }
   }
 
   #contactText {
@@ -39,8 +38,12 @@
   }
 
   @include breakpoint-custom($screen-sm-max) {
-    // padding: 90px 0;
-    // background-image: none;
-    // height: 100%;
+    padding: 0;
+    @include max-width-container();
+
+    .contactImage {
+      display: block;
+      width: 60%;
+    }
   }
 }

@@ -86,7 +86,6 @@
   }
 
   @include breakpoint-custom($screen-xs-max) {
-    padding: 0;
     @include max-width-container(0, 5vh);
   }
 }
