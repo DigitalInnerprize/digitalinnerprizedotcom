@@ -6,12 +6,12 @@
 
 .serviceCardContainer {
   padding: 0 2.5%;
-  margin-bottom: 0;
+  margin: 5vh 0;
 
   .serviceCards {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 12vh);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 15vh);
     grid-template-areas: 
       "text"
       "left"
