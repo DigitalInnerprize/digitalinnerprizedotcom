@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import Img from "gatsby-image"
 
 const Contact = () => {
@@ -15,10 +16,6 @@ const Contact = () => {
     }
   `)
 
-  const onClick = () => {
-    window.location.href = 'mailto:digitalinnerprize@gmail.com';
-  }
-
   return (
     <div className="contactPageContainer">
       <div className='contactContainer'>
@@ -30,11 +27,12 @@ const Contact = () => {
           <div id="contactText">
             <h3 className='contactTitle'>Let's Talk Business!</h3>
             <p>A digital agency for brands that focus on creating great work and that gets phenomenal results along with a unique digital presence.</p>
-            <button 
-              className='contactBtn'
-              onClick={onClick}>
+            <OutboundLink 
+              href='mailto:digitalinnerprize@gmail.com'>
+              <button className='contactBtn'>
                 Contact Us
-            </button>
+              </button>
+            </OutboundLink>
           </div>
       </div>
     </div>
