@@ -8,7 +8,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Digital InnerPrize`,
-    description: `Digital InnerPrize is where we help small businesses and entrepreneurs fully embrace modern ways of reaching their customers to succeed in today’s crowded marketplace your customers are online… and you need to meet them there`,
+    description: `At Digital InnerPrize we create websites or mobile apps to assist small businesses and entrepreneurs fully embrace modern ways of reaching their customers and succeed in today’s crowded marketplace. Majority of your customers are online... and you need to meet them there.`,
     author: `Digital InnerPrize`,
     projectData: [
       {
